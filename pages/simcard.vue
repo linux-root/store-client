@@ -29,8 +29,10 @@
           store.commit('simcard/emptyList')
           strapi.request('get', 'simcards').then(res => {
               res.forEach(sim => {
-                  const imageUrl = API_URL + sim.image.url
+                  const imageUrl = `${API_URL}${sim.image.url}`
                   sim.image.url = imageUrl
+                 console.log(sim)
+                 console.log(imageUrl)
                   store.commit('simcard/add', {
                       id: sim.id,
                       ...sim

@@ -8,8 +8,14 @@
       </div>
     </v-card-title>
 
-    <v-card-actions>
-      <v-btn flat color="orange">{{product.price}}₫</v-btn>
+    <v-divider light></v-divider>
+
+    <v-card-actions class="pa-3">
+     <strong class="red--text display-1 font-weight-bold">{{product.price}}₫</strong>
+    </v-card-actions>
+    <v-card-actions class="pa-3">
+      <v-spacer></v-spacer>
+      <span v-for="i in 5"><v-icon >star_rate</v-icon></span>
     </v-card-actions>
   </v-card>
   </div>
