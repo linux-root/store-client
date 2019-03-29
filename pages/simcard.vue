@@ -24,7 +24,8 @@
       Product
     },
       async fetch({store}) {
-          const API_URL = process.env.API_URL || 'http://localhost:1337'
+          const API_URL = process.env.API_URL
+          console.log(process.env.API_URL)
           const strapi = new Strapi(API_URL)
           store.commit('simcard/emptyList')
           strapi.request('get', 'simcards').then(res => {
