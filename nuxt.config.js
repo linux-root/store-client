@@ -8,7 +8,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'Duynhat.com.vn',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -21,6 +21,9 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
+    ],
+    script : [
+      {scr: '/js/facebook-chat.js'}
     ]
   },
 

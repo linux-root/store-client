@@ -72,6 +72,12 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+    <div id="fb-root"></div>
+    <div class="fb-customerchat"
+         page_id="551298251956658"
+         logged_in_greeting="Xin chào, chúng tôi có thể giúp gì cho quý khách ạ. Xin để lại tin nhắn"
+         logged_out_greeting="Xin chào, chúng tôi có thể giúp gì cho quý khách ạ. Xin để lại tin nhắn">
+    </div>
     <v-footer
       :fixed="fixed"
       app
@@ -110,6 +116,9 @@ export default {
       rightDrawer: false,
       title: 'Duynhat.com.vn'
     }
+  },
+  mounted() {
+    window.FB
   }
 }
 </script>

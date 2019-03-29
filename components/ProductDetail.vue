@@ -48,7 +48,7 @@
           const id = this.$route.params.id
           let product = this.$store.getters['simcard/getById'](id)
           if(product === undefined || product.id  === undefined){
-              const API_URL = process.env.API_URL
+              const API_URL = process.env.API_URL //this is env from nuxt config, not actual process.env.
               const strapi = new Strapi(API_URL)
               const sim= await strapi.request('get', `simcards/${id}`)
               const absoluteImageURL = API_URL + sim.image.url
