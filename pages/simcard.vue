@@ -1,34 +1,16 @@
 <template>
-<!--    <v-container grid-list-lg >
-      <v-layout row wrap>
-    <v-flex :key="product.id" v-for="product in simcards" xs12 sm6 md4 lg3>
-      <Product :product="product"></Product>
-    </v-flex>
-      </v-layout>
-    </v-container>-->
-
   <v-layout>
-        <v-container class="grid-list-md">
+        <v-container class="grid-list-lg">
           <v-layout row wrap>
             <v-flex
               v-for="product in simcards"
               :key="product.id"
-              xs4 lg3
-            >
-<!--              <v-card flat tile>-->
-<!--                <v-img-->
-<!--                  :src="product.image.url"-->
-<!--                  height="150px"-->
-<!--                ></v-img>-->
-<!--              </v-card>-->
+              xs4 lg3>
               <Product :product="product"></Product>
             </v-flex>
           </v-layout>
         </v-container>
   </v-layout>
-
-
-
 </template>
 
 <script>
@@ -37,18 +19,6 @@
   export default {
     name: 'simcard',
 
-    data(){
-      return {
-        size: 'lg',
-        items: [
-          { text: 'Extra small (2px)', value: 'xs' },
-          { text: 'Small (4px)', value: 'sm' },
-          { text: 'Medium (8px)', value: 'md' },
-          { text: 'Large (16px)', value: 'lg' },
-          { text: 'Extra large (24px)', value: 'xl' }
-        ]
-      }
-    },
       computed : {
         simcards(){
             return this.$store.getters['simcard/getAllSimcards']

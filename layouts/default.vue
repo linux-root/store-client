@@ -1,7 +1,7 @@
 <template>
   <v-app light>
     <v-navigation-drawer
-      class="green lighten-3"
+      class="blue lighten-3"
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
@@ -57,7 +57,8 @@
         <nuxt />
       </v-container>
       <!-- Footer -->
-      <v-footer >
+      <v-footer class="row">
+        <v-flex lg12 md12 xs12>
         <v-card flat tile class="indigo lighten-1 white--text text-xs-center text-lg-center">
           <v-card-text class="text-lg-left">
             <v-icon >store</v-icon><span>  HỆ THỐNG CỬA HÀNG</span>
@@ -66,19 +67,12 @@
                 {{address}}
               </li>
             </ul>
+            <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
           </v-card-text>
         </v-card>
-
-        <v-card flat tile class="indigo lighten-1 white--text text-xs-center text-lg-center">
-          <v-card-text class="text-lg-left">
-            <v-icon >local_shipping</v-icon><span> ĐỐI TÁC VẬN CHUYỂN</span>
-
-              <div v-for="shippingPartner in info.shippingPartners">
-                <v-img :sizes="21" :src="shippingPartner.icon"></v-img>
-              </div>
-
-          </v-card-text>
-        </v-card>
+        </v-flex>
       </v-footer>
       <!-- END Footer -->
     </v-content>

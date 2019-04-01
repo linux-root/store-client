@@ -38,8 +38,6 @@
         compiledMarkdown(){
           let product = this.$store.getters['simcard/getCurrentSimcard']
           if(product.description){
-            console.log('marked')
-            console.log(product)
             return marked(product.description, {sanitize : true})
           }
         }
