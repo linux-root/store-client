@@ -56,25 +56,7 @@
       <v-container>
         <nuxt />
       </v-container>
-      <!-- Footer -->
-      <v-footer class="row">
-        <v-flex lg12 md12 xs12>
-        <v-card flat tile class="indigo lighten-1 white--text text-xs-center text-lg-center">
-          <v-card-text class="text-lg-left">
-            <v-icon >store</v-icon><span>  HỆ THỐNG CỬA HÀNG</span>
-            <ul>
-              <li v-for="address in info.addresses">
-                {{address}}
-              </li>
-            </ul>
-            <v-spacer></v-spacer>
-            <v-spacer></v-spacer>
-            <v-spacer></v-spacer>
-          </v-card-text>
-        </v-card>
-        </v-flex>
-      </v-footer>
-      <!-- END Footer -->
+      <Footer></Footer>
     </v-content>
     <v-navigation-drawer
       v-model="rightDrawer"
@@ -95,8 +77,10 @@
 </template>
 
 <script>
+  import Footer from '~/components/Footer.vue';
 export default {
-  data() {
+    components: {Footer},
+    data() {
     return {
       clipped: false,
       drawer: true,
@@ -122,21 +106,11 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Duynhat.com.vn',
-      info: {
-        addresses: [
-          'Chi nhánh Hà Nội: 254 Minh Khai - Hai Bà Trưng  - Hà Nội',
-          'Chi nhánh Hà Nội: 52 Lê Đại Hành - Hai Bà Trưng - Hà Nội,',
-          'Chi nhánh TP Hồ Chí Minh: 53 Nguyễn Thị Minh Khai - Phường Bến Nghé - Quận 1 - TP Hồ Chí Minh',
-          'Chi nhánh TP Hồ Chí Minh: 71/3 Chu Văn An - Phường 26 - Quận Bình Thạnh - TP Hồ Chí Minh'
-        ],
-        shippingPartners :[
-          { icon: '/images/giaohangtietkiem.png'},
-          { icon: '/images/viettelpost.png'},
-          { icon: '/images/giaohangtietkiem.png'}
-        ]
-      }
     }
   },
+    component: {
+      Footer
+    },
   mounted() {
     window.FB
   }
