@@ -56,6 +56,31 @@
       <v-container>
         <nuxt />
       </v-container>
+      <!-- Footer -->
+      <v-footer >
+        <v-card flat tile class="indigo lighten-1 white--text text-xs-center text-lg-center">
+          <v-card-text class="text-lg-left">
+            <v-icon >store</v-icon><span>  HỆ THỐNG CỬA HÀNG</span>
+            <ul>
+              <li v-for="address in info.addresses">
+                {{address}}
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+
+        <v-card flat tile class="indigo lighten-1 white--text text-xs-center text-lg-center">
+          <v-card-text class="text-lg-left">
+            <v-icon >local_shipping</v-icon><span> ĐỐI TÁC VẬN CHUYỂN</span>
+
+              <div v-for="shippingPartner in info.shippingPartners">
+                <v-img :sizes="21" :src="shippingPartner.icon"></v-img>
+              </div>
+
+          </v-card-text>
+        </v-card>
+      </v-footer>
+      <!-- END Footer -->
     </v-content>
     <v-navigation-drawer
       v-model="rightDrawer"
@@ -72,18 +97,6 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <div id="fb-root"></div>
-    <div class="fb-customerchat"
-         page_id="551298251956658"
-         logged_in_greeting="Xin chào, chúng tôi có thể giúp gì cho quý khách ạ. Xin để lại tin nhắn"
-         logged_out_greeting="Xin chào, chúng tôi có thể giúp gì cho quý khách ạ. Xin để lại tin nhắn">
-    </div>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>Kurro &copy; 2019</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -114,7 +127,20 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Duynhat.com.vn'
+      title: 'Duynhat.com.vn',
+      info: {
+        addresses: [
+          'Chi nhánh Hà Nội: 254 Minh Khai - Hai Bà Trưng  - Hà Nội',
+          'Chi nhánh Hà Nội: 52 Lê Đại Hành - Hai Bà Trưng - Hà Nội,',
+          'Chi nhánh TP Hồ Chí Minh: 53 Nguyễn Thị Minh Khai - Phường Bến Nghé - Quận 1 - TP Hồ Chí Minh',
+          'Chi nhánh TP Hồ Chí Minh: 71/3 Chu Văn An - Phường 26 - Quận Bình Thạnh - TP Hồ Chí Minh'
+        ],
+        shippingPartners :[
+          { icon: '/images/giaohangtietkiem.png'},
+          { icon: '/images/viettelpost.png'},
+          { icon: '/images/giaohangtietkiem.png'}
+        ]
+      }
     }
   },
   mounted() {
