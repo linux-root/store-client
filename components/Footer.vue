@@ -1,6 +1,6 @@
 <template>
     <v-footer class="row">
-        <v-flex lg12 md12 xs12>
+        <v-flex lg12 md12 xs12 class="pt-5">
             <v-card flat tile class="blue darken-1 white--text text-xs-center text-lg-center">
                 <v-card-text class="text-lg-left">
                     <v-icon >store</v-icon><span>  HỆ THỐNG CỬA HÀNG</span>
