@@ -23,7 +23,7 @@ export default {
       }
     ],
     script : [
-      {scr: '/js/facebook-chat.js'}
+      {src: '/js/facebook-chat.js'}
     ]
   },
 

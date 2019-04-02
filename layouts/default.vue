@@ -91,15 +91,16 @@ export default {
           title: 'Welcome',
           to: '/'
         },
+          {
+              icon: 'sim_card',
+              title: 'SIM 4G',
+              to: '/simcard'
+          }
+          ,
         {
           icon: 'bubble_chart',
           title: 'Cục phát sóng Wifi di động',
           to: '/inspire'
-        },
-        {
-          icon: 'sim_card',
-          title: 'SIM 4G',
-          to: '/simcard'
         }
       ],
       miniVariant: false,
@@ -110,9 +111,6 @@ export default {
   },
     component: {
       Footer
-    },
-  mounted() {
-    window.FB
-  }
+    }
 }
 </script>

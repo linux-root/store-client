@@ -1,6 +1,6 @@
 <template>
   <router-link :to="{name: 'simcards-id', params: {id: product.id}}">
-  <v-card hover="true" raised="true">
+  <v-card hover raised>
       <v-img :src="product.image.url" height="350px"></v-img>
     <v-card-title>
       <div>
