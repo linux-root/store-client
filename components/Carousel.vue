@@ -14,16 +14,16 @@
       return {
         items: [
           {
-            src: '/photos/c1.jpg'
-          },
-          {
-            src: '/photos/c2.jpg'
+            src: '/photos/c4.jpg'
           },
           {
             src: '/photos/c3.jpg'
           },
           {
-            src: '/photos/c4.jpg'
+            src: '/photos/c2.jpg'
+          },
+          {
+            src: '/photos/c1.jpg'
           }
         ]
       }
